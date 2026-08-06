@@ -1,7 +1,7 @@
 name: 可转债每日提醒
 on:
   schedule:
-    # UTC时间！北京时间早上8:45 → UTC 00:45
+    # UTC时间00:45 = 北京时间早上08:45
     - cron: "45 0 * * *"
   workflow_dispatch: # 支持手动点击测试
 
@@ -10,14 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: 设置Python
+      - name: Python环境
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
       - name: 安装依赖
         run: pip install requests
-      - name: 执行脚本
+      - name: 运行脚本
         env:
-          WXPUSHER_APP_TOKEN: ${{ secrets.WXPUSHER_APP_TOKEN }}
-          WXPUSHER_UID: ${{ secrets.WXPUSHER_UID }}
+          WX_APPID: ${{ secrets.WX_APPID }}
+          WX_APPSECRET: ${{ secrets.WX_APPSECRET }}
+          WX_OPENID: ${{ secrets.WX_OPENID }}
+          WX_TEMPLATE_ID: ${{ secrets.WX_TEMPLATE_ID }}
         run: python main.py
