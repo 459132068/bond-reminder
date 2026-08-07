@@ -1,0 +1,28 @@
+{
+  "lookahead_days": 1,
+  "notify_when_empty": true,
+  "push_channels": [
+    {
+      "type": "serverchan",
+      "enabled": false,
+      "sendkey": ""
+    },
+    {
+      "type": "pushplus",
+      "enabled": false,
+      "token": ""
+    },
+    {
+      "type": "wecom",
+      "enabled": false,
+      "webhook_key": ""
+    },
+    {
+      "type": "wxpusher",
+      "enabled": false,
+      "app_token": "",
+      "uids": [],
+      "topic_ids": []
+    }
+  ]
+}
