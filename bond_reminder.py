@@ -105,7 +105,7 @@ def collect_events(rows, start, days):
 
 
 def build_message(events, start, days):
-    lines = ["**新债提醒 · {}（{}）**".format(start.isoformat(), WEEKDAY[start.weekday()])]
+    lines = ["**githubB新债提醒 · {}（{}）**".format(start.isoformat(), WEEKDAY[start.weekday()])]
     for offset in range(days):
         day = (start + timedelta(days=offset)).isoformat()
         label = "今日" if offset == 0 else ("明日" if offset == 1 else day)
