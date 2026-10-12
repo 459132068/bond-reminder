@@ -357,7 +357,7 @@ def main():
     else:
         notify_when_empty = env_value(
             "BOND_NOTIFY_WHEN_EMPTY", "true"
-        ).lower() in ("1", "true", "yes")
+        ).lower() in ("1", "false", "yes")
     start = date.fromisoformat(args.date) if args.date else date.today()
 
     print("正在拉取新债数据...")
