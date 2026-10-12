@@ -63,7 +63,7 @@ else:
             "touser": OPENID,
             "template_id": TEMPLATE_ID,
             "data": {
-                "first": {"value": "可转债每日提醒", "color": "#0066cc"},
+                "first": {"value": "githubM可转债每日提醒", "color": "#0066cc"},
                 "date": {"value": today},
                 "buy": {"value": buy_text.strip()},
                 "list": {"value": list_text.strip()},
